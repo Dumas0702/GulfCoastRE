@@ -8,7 +8,7 @@ const EMAIL = "gregorymdumas@gmail.com";
 const BROKERAGE = "Key Performance Team — Keller Williams (Daphne Office)";
 const BROKER_URL = "https://keyperformanceteam.com/";
 const BRAND_COLOR = "#0f766e"; // teal-700
-const HEADSHOT_URL = "/headshot.png"; // place your headshot in /public/headshot.png
+const HEADSHOT_URL = import.meta.env.BASE_URL + 'headshot.png'; // place your headshot in /public/headshot.png
 
 // ===== Data you can tweak later =====
 const serviceAreas = [
