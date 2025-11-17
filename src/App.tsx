@@ -16,8 +16,8 @@ const serviceAreas = [
   {
     name: "Fairhope",
     blurb: "Great Schools • Walkable downtown • Arts & dining.",
-    img: "https://plus.unsplash.com/premium_photo-1712767020333-170a34d85386?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Sailboat on the bay",
+    img: "https://images.unsplash.com/photo-1610562409635-6242c9854e0d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Sailboats on the bay",
   },
   {
     name: "Daphne",
@@ -34,20 +34,20 @@ const serviceAreas = [
   {
     name: "Foley",
     blurb: "Shopping • Value and growth.",
-    img: "https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?q=80&w=1600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1728923026449-910ee589995d?q=80&w=2352&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Vintage train and depot museum",
   },
   {
     name: "Gulf Shores",
     blurb: "Sugar-sand beaches • Short-term rentals.",
-    img: "https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1600&auto=format&fit=crop",
+    img: "hhttps://images.unsplash.com/photo-1704291684136-7e902416cfb2?q=80&w=2350&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Gulf Shores beach shoreline",
   },
   {
     name: "Orange Beach",
     blurb: "Perdido Pass • Fishing & boating • Resort amenities.",
-    img: "https://images.unsplash.com/photo-1508182311256-e3f7d50bd1b7?q=80&w=1600&auto=format&fit=crop",
-    alt: "Fishing boat near Perdido Pass",
+    img: "https://images.unsplash.com/photo-1706293042316-e84ffdf1f55d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Fishing boats",
   },
 ];
 
