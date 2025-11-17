@@ -449,35 +449,44 @@ export default function App() {
       </header>
 
       {/* Hero */}
-      <section id="home" className="relative">
-        <div className="absolute inset-0 -z-10">
-          <img
-            src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2400&auto=format&fit=crop"
-            alt="Gulf Coast Homes"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 py-24 md:py-36">
-          <div className="max-w-3xl text-white">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur px-3 py-1 rounded-full border border-white/20 mb-4">
-              <span className="text-xs">Equal Housing Opportunity</span>
-              <span className="text-xs">•</span>
-              <span className="text-xs">REALTOR®</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-[1.1]">
-              {AGENT_NAME} — Your Gulf Coast Real Estate Partner
-            </h1>
-            <p className="mt-4 text-lg md:text-xl text-white/90">{TAGLINE}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="#listings">Browse listings</Button>
-              <Button variant="secondary" href="#sell">
-                Get a free home valuation
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+<section id="home" className="relative">
+  {/* Background image */}
+  <div className="absolute inset-0 -z-10">
+    <img
+      src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2400&auto=format&fit=crop"
+      alt="Gulf Coast homes at sunset"
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-black/45" />
+  </div>
+
+  {/* Content overlay */}
+  <div className="max-w-7xl mx-auto px-4 py-20 md:py-28 min-h-[60vh] md:min-h-[75vh] flex flex-col justify-between">
+    {/* Top-left name + line */}
+    <div className="max-w-xl text-white">
+      <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur px-3 py-1 rounded-full border border-white/20 mb-4">
+        <span className="text-[11px] tracking-[0.18em] uppercase">
+          Gulf Coast Real Estate
+        </span>
+      </div>
+      <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">
+        {AGENT_NAME} — Your Gulf Coast Real Estate Partner
+      </h1>
+      <p className="mt-3 text-sm md:text-base text-white/85">
+        {TAGLINE}
+      </p>
+    </div>
+
+    {/* Bottom-left buttons */}
+    <div className="mt-10 md:mt-0 flex flex-col md:flex-row gap-3 md:items-center">
+      <Button href="#listings">Browse listings</Button>
+      <Button variant="secondary" href="#sell">
+        Get a free home valuation
+      </Button>
+    </div>
+  </div>
+</section>
+
 
       {/* Trust Signals */}
       <Section
