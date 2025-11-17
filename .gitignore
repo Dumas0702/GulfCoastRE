@@ -1,3 +1,2 @@
-echo "node_modules/" >> .gitignore
-echo "*.tsbuildinfo" >> .gitignore
-
+node_modules/
+tsconfig.tsbuildinfo
