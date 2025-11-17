@@ -15,7 +15,7 @@ const serviceAreas = [
   {
     name: "Fairhope",
     blurb: "Great Schools • Walkable downtown • Arts & dining.",
-    img: "https://unsplash.com/photos/the-sun-is-setting-over-a-body-of-water-Yg6Xo-9bAyM",
+    img: "https://images.unsplash.com/photo-1709823026451-d3714df177f4?q=80&w=2641&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Fairhope",
   },
   {
