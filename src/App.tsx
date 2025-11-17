@@ -3,7 +3,7 @@ import React, { useMemo, useState } from "react";
 
 // ===== Quick Settings (edit these) =====
 const AGENT_NAME = "Greg Dumas";
-const TAGLINE = "Friendly, helpful, and professional real estate guidance for Baldwin & Mobile County";
+const TAGLINE = "Helpful, and professional real estate guidance for Baldwin County";
 const PHONE = "(251) 752-2814";
 const EMAIL = "gregorymdumas@gmail.com";
 const BROKERAGE = "Key Performance Team — Keller Williams (Daphne Office)";
@@ -58,21 +58,21 @@ const searchLinks = [
     title: "Baldwin County — All Homes",
     desc: "Browse the full market across price points and cities.",
     href: "https://www.zillow.com/baldwin-county-al/",
-    img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "SRCH-2",
     title: "Daphne — New This Week",
     desc: "See the freshest listings added in the last 7 days.",
     href: "https://www.zillow.com/daphne-al/newest/",
-    img: "https://images.unsplash.com/photo-1560185008-b033106af2a7?q=80&w=1600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "SRCH-3",
     title: "Gulf Shores — Condos",
     desc: "Beach and lagoon-side condos at a range of budgets.",
     href: "https://www.zillow.com/gulf-shores-al/condos/",
-    img: "https://images.unsplash.com/photo-1505691723518-36a5ac3b2d52?q=80&w=1600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1656261443293-02c750b32bb5?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
@@ -448,45 +448,45 @@ export default function App() {
         </div>
       </header>
 
-      {/* Hero */}
+     {/* Hero */}
 <section id="home" className="relative">
-  {/* Background image */}
-  <div className="absolute inset-0 -z-10">
+  <div className="relative h-[60vh] md:h-[75vh]">
+    {/* Background image */}
     <img
-      src="https://images.unsplash.com/photo-1533266262804-eacb88ab4312?q=80&w=2344&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt="Gulf Coast homes at sunset"
-      className="w-full h-full object-cover"
+      src="https://images.unsplash.com/photo-1533266262804-eacb88ab4312?q=80&w=3544&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt="Oak tree home"
+      className="absolute inset-0 w-full h-full object-cover"
     />
-    <div className="absolute inset-0 bg-black/45" />
-  </div>
+    {/* Dark gradient overlay so text is readable */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20" />
 
-  {/* Content overlay */}
-  <div className="max-w-7xl mx-auto px-4 py-20 md:py-28 min-h-[60vh] md:min-h-[75vh] flex flex-col justify-between">
-    {/* Top-left name + line */}
-    <div className="max-w-xl text-white">
-      <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur px-3 py-1 rounded-full border border-white/20 mb-4">
-        <span className="text-[11px] tracking-[0.18em] uppercase">
-          Gulf Coast Real Estate
-        </span>
+    {/* Content overlay */}
+    <div className="relative h-full max-w-7xl mx-auto px-4 py-8 flex flex-col justify-between">
+      {/* Top-left name + tagline */}
+      <div className="max-w-xl text-white">
+        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur px-3 py-1 rounded-full border border-white/20 mb-4">
+          <span className="text-[11px] tracking-[0.18em] uppercase">
+            Gulf Coast Real Estate
+          </span>
+        </div>
+        <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">
+          Your Gulf Coast Real Estate Partner
+        </h1>
+        <p className="mt-3 text-sm md:text-base text-white/80">
+          {TAGLINE}
+        </p>
       </div>
-      <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">
-        {AGENT_NAME} — Your Gulf Coast Real Estate Partner
-      </h1>
-      <p className="mt-3 text-sm md:text-base text-white/85">
-        {TAGLINE}
-      </p>
-    </div>
 
-    {/* Bottom-left buttons */}
-    <div className="mt-10 md:mt-0 flex flex-col md:flex-row gap-3 md:items-center">
-      <Button href="#listings">Browse listings</Button>
-      <Button variant="secondary" href="#sell">
-        Get a free home valuation
-      </Button>
+      {/* Bottom-left buttons */}
+      <div className="mt-8 flex flex-col md:flex-row gap-3 md:items-center">
+        <Button href="#listings">Browse listings</Button>
+        <Button variant="secondary" href="#sell">
+          Get a free home valuation
+        </Button>
+      </div>
     </div>
   </div>
 </section>
-
 
       {/* Trust Signals */}
       <Section
