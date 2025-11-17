@@ -16,14 +16,14 @@ const serviceAreas = [
   {
     name: "Fairhope",
     blurb: "Great Schools • Walkable downtown • Arts & dining.",
-    img: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1600&auto=format&fit=crop",
-    alt: "Fairhope Pier at sunset",
+    img: "https://plus.unsplash.com/premium_photo-1712767020333-170a34d85386?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Sailboat on the bay",
   },
   {
     name: "Daphne",
     blurb: "Mobile Bay • Old Town Daphne • Family-friendly neighborhoods.",
-    img: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1600&auto=format&fit=crop",
-    alt: "I-10 Bayway over Mobile Bay",
+    img: "https://images.unsplash.com/photo-1703639854187-9c2853b2a600?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Sunset over Mobile Bay",
   },
   {
     name: "Spanish Fort",
