@@ -722,13 +722,28 @@ export default function App() {
           <div>
             <div className="font-semibold mb-2">Stay in the loop</div>
             <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                const email = (e.currentTarget as any).email?.value;
-                console.log("Newsletter", email);
-              }}
-              className="flex gap-2"
-            >
+  onSubmit={async (e) => {
+    e.preventDefault();
+    const email = e.currentTarget.email?.value;
+
+    const res = await fetch("https://formspree.io/f/manvyqbl", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({ email }),
+    });
+
+    if (res.ok) {
+      alert("Thanks! You’re on my list now.");
+    } else {
+      alert("Something went wrong — please try again.");
+    }
+  }}
+  className="flex gap-2"
+>
+
               <input
                 name="email"
                 type="email"
