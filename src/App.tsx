@@ -202,17 +202,40 @@ function ContactForm({ onSubmit }: { onSubmit?: (d: any) => void }) {
     message: "",
   });
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   function update(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     const { name, value } = e.target;
     setForm((f) => ({ ...f, [name]: value }));
   }
 
-  function submit(e: React.FormEvent) {
+  async function submit(e: React.FormEvent) {
     e.preventDefault();
-    console.log("Lead submitted", form); // replace with AWS SES/API route later
-    setSent(true);
-    if (onSubmit) onSubmit(form);
+    setSubmitting(true);
+
+    try {
+      const res = await fetch("https://formspree.io/f/YOUR_FORM_ID_HERE", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (res.ok) {
+        setSent(true);
+        if (onSubmit) onSubmit(form);
+      } else {
+        console.error("Form submit error", await res.text());
+        alert("There was a problem sending your message. Please try again or call me.");
+      }
+    } catch (err) {
+      console.error("Form submit error", err);
+      alert("There was a problem sending your message. Please try again or call me.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (sent) {
