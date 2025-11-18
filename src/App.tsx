@@ -511,67 +511,35 @@ export default function App() {
   </div>
 </section>
 
-      {/* Trust Signals */}
-      <Section
-        id="value"
-        title="What you can expect"
-        subtitle="Clear communication • Straightforward guidance • Backed by the Key Performance Team at Keller Williams"
-      >
-        <div className="grid md:grid-cols-4 gap-6">
-          <Stat
-            icon="📬"
-            label="Proactive updates"
-            text="You’ll always know what’s next and where things stand — from first showing through close."
-          />
-          <Stat
-            icon="📊"
-            label="Data-driven pricing"
-            text="Local comps and trend analysis tailored to each neighborhood and property type."
-          />
-          <Stat
-            icon="🤝"
-            label="Skilled negotiation"
-            text="Offer strategies and clean terms that protect your interests while staying competitive."
-          />
-          <Stat
-            icon="🛠️"
-            label="Trusted network"
-            text="Inspectors, lenders, contractors, and closing attorneys vetted by our team."
-          />
-        </div>
-      </Section>
-
-      {/* Buy */}
-      <Section
-        id="buy"
-        title="Buy with confidence"
-        subtitle="From first showing to closing table, I’ll handle the details and keep you informed."
-      >
-        <div className="grid md:grid-cols-3 gap-6">
-          {[
-            {
-              title: "Local market guidance",
-              text: "Daily watch on Baldwin & Mobile inventory, pricing trends, and incentives.",
-            },
-            {
-              title: "Offer strategy",
-              text: "Win competitively with clean terms, smart contingencies, and lender alignment.",
-            },
-            {
-              title: "Trusted network",
-              text: "Inspectors, lenders, contractors, and closing attorneys I’d use myself.",
-            },
-          ].map((c) => (
-            <div
-              key={c.title}
-              className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm"
-            >
-              <div className="text-xl font-semibold">{c.title}</div>
-              <div className="text-slate-600 mt-2">{c.text}</div>
-            </div>
-          ))}
-        </div>
-      </Section>
+{/* Trust + Buy Combined */}
+<Section
+  id="value"
+  title="What you can expect"
+  subtitle="Clear communication • Straightforward guidance • Backed by the Key Performance Team at Keller Williams"
+>
+  <div className="grid md:grid-cols-4 gap-6">
+    <Stat
+      icon="📬"
+      label="Proactive updates"
+      text="You’ll always know what’s next and where things stand — from first showing through close."
+    />
+    <Stat
+      icon="📊"
+      label="Data-driven pricing"
+      text="Local comps and trend analysis tailored to each neighborhood and property type."
+    />
+    <Stat
+      icon="🤝"
+      label="Skilled negotiation"
+      text="Offer strategies and clean terms that protect your interests while staying competitive."
+    />
+    <Stat
+      icon="🛠️"
+      label="Trusted network"
+      text="Inspectors, lenders, contractors, and closing attorneys vetted by our team."
+    />
+  </div>
+</Section>
 
       {/* Sell */}
       <Section
