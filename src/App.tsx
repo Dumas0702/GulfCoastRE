@@ -556,33 +556,6 @@ export default function App() {
         </div>
       </Section>
 
-      {/* Areas */}
-      <Section
-        id="areas"
-        title="Neighborhoods I serve"
-        subtitle="Baldwin & Mobile County — from historic streets to sugar-sand beaches."
-      >
-        <div className="grid md:grid-cols-3 gap-6">
-          {serviceAreas.map((a) => (
-            <div
-              key={a.name}
-              className="group relative overflow-hidden rounded-2xl border border-slate-200 shadow-sm"
-            >
-              <img
-                src={a.img}
-                alt={a.name}
-                className="aspect-[4/3] w-full object-cover object-center transition group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              <div className="absolute bottom-0 p-5 text-white">
-                <div className="text-lg font-semibold">{a.name}</div>
-                <div className="text-white/90 text-sm">{a.blurb}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Section>
-
       {/* Listings (temporary links) */}
       <Section
         id="listings"
