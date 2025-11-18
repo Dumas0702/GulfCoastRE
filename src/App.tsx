@@ -421,31 +421,19 @@ export default function App() {
               </div>
             </a>
             <nav className="hidden md:flex items-center gap-6 text-sm">
-              <a href="#buy" className="hover:text-teal-700">
-                Buy
-              </a>
-              <a href="#sell" className="hover:text-teal-700">
-                Sell
-              </a>
-              <a href="#areas" className="hover:text-teal-700">
-                Areas
-              </a>
-              <a href="#listings" className="hover:text-teal-700">
-                Listings
-              </a>
-              <a href="#testimonials" className="hover:text-teal-700">
-                Reviews
-              </a>
-              <a href="#contact" className="hover:text-teal-700">
-                Contact
-              </a>
-              <a
-                href={`tel:${PHONE.replace(/[^\d]/g, "")}`}
-                className="ml-2 inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-200 hover:bg-slate-100"
-              >
-                📞 {PHONE}
-              </a>
-            </nav>
+  <a href="#value" className="hover:text-teal-700">What to expect</a>
+  <a href="#areas" className="hover:text-teal-700">Areas</a>
+  <a href="#listings" className="hover:text-teal-700">Listings</a>
+  <a href="#testimonials" className="hover:text-teal-700">Reviews</a>
+  <a href="#contact" className="hover:text-teal-700">Contact</a>
+  <a
+    href={`tel:${PHONE.replace(/[^\d]/g, "")}`}
+    className="ml-2 inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-200 hover:bg-slate-100"
+  >
+    📞 {PHONE}
+  </a>
+</nav>
+
             <button
               className="md:hidden text-2xl"
               onClick={() => setMobileOpen((v) => !v)}
@@ -455,7 +443,7 @@ export default function App() {
           </div>
           {mobileOpen && (
             <div className="md:hidden pb-4 grid gap-2 text-sm">
-              {["#buy", "#sell", "#areas", "#listings", "#testimonials", "#contact"].map(
+              {["#value", "#areas", "#listings", "#testimonials", "#contact"].map(
                 (href) => (
                   <a
                     key={href}
@@ -511,77 +499,60 @@ export default function App() {
   </div>
 </section>
 
-{/* Trust + Buy Combined */}
-<Section
-  id="value"
-  title="What you can expect"
-  subtitle="Clear communication • Straightforward guidance • Backed by the Key Performance Team at Keller Williams"
->
-  <div className="grid md:grid-cols-4 gap-6">
-    <Stat
-      icon="📬"
-      label="Proactive updates"
-      text="You’ll always know what’s next and where things stand — from first showing through close."
-    />
-    <Stat
-      icon="📊"
-      label="Data-driven pricing"
-      text="Local comps and trend analysis tailored to each neighborhood and property type."
-    />
-    <Stat
-      icon="🤝"
-      label="Skilled negotiation"
-      text="Offer strategies and clean terms that protect your interests while staying competitive."
-    />
-    <Stat
-      icon="🛠️"
-      label="Trusted network"
-      text="Inspectors, lenders, contractors, and closing attorneys vetted by our team."
-    />
-  </div>
-</Section>
-
-      {/* Sell */}
+      {/* What to expect (Buy & Sell) */}
       <Section
-        id="sell"
-        title="Sell for top dollar"
-        subtitle="Pricing precision, polished presentation, and proactive communication."
+        id="value"
+        title="What you can expect"
+        subtitle="Clear communication • Data-driven pricing • Professional marketing — whether you’re buying or selling."
+      >
+        <div className="grid md:grid-cols-4 gap-6">
+          <Stat
+            icon="📬"
+            label="Proactive updates"
+            text="From first showing to closing, you’ll always know what’s happening next, including feedback and weekly activity summaries."
+          />
+          <Stat
+            icon="📊"
+            label="Data-driven pricing"
+            text="Neighborhood-level comps, trend analysis, and a clear prep checklist to help you price with confidence and maximize return."
+          />
+          <Stat
+            icon="🤝"
+            label="Skilled negotiation"
+            text="Offer and counteroffer strategies designed to protect your interests while staying competitive in our local market."
+          />
+          <Stat
+            icon="📣"
+            label="Professional marketing"
+            text="Photography, online exposure, and a trusted network of lenders, inspectors, and contractors to support a smooth transaction."
+          />
+        </div>
+      </Section>
+
+      {/* Areas */}
+      <Section
+        id="areas"
+        title="Neighborhoods I serve"
+        subtitle="Baldwin & Mobile County — from historic streets to sugar-sand beaches."
       >
         <div className="grid md:grid-cols-3 gap-6">
-          {[
-            {
-              title: "Pricing & prep",
-              text: "Data-backed pricing plus a concise prep checklist to maximize return.",
-            },
-            {
-              title: "Pro marketing",
-              text: "Photography, 3D tours, targeted social, email, and yard-to-URL capture.",
-            },
-            {
-              title: "Transparent updates",
-              text: "Weekly metrics and feedback summaries — no guesswork.",
-            },
-          ].map((c) => (
+          {serviceAreas.map((a) => (
             <div
-              key={c.title}
-              className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm"
+              key={a.name}
+              className="group relative overflow-hidden rounded-2xl border border-slate-200 shadow-sm"
             >
-              <div className="text-xl font-semibold">{c.title}</div>
-              <div className="text-slate-600 mt-2">{c.text}</div>
+              <img
+                src={a.img}
+                alt={a.name}
+                className="aspect-[4/3] w-full object-cover object-center transition group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute bottom-0 p-5 text-white">
+                <div className="text-lg font-semibold">{a.name}</div>
+                <div className="text-white/90 text-sm">{a.blurb}</div>
+              </div>
             </div>
           ))}
-        </div>
-        <div className="mt-6">
-          <Button
-            onClick={() =>
-              setLeadModal({ open: true, payload: { type: "valuation" } })
-            }
-          >
-            Request your free valuation
-          </Button>
-          <span className="ml-3 text-slate-500 text-sm">
-            Backed by the Key Performance Team at Keller Williams
-          </span>
         </div>
       </Section>
 
@@ -754,13 +725,8 @@ export default function App() {
             <div className="font-semibold mb-2">Quick links</div>
             <ul className="space-y-1 text-slate-700">
               <li>
-                <a className="hover:underline" href="#buy">
-                  Buy
-                </a>
-              </li>
-              <li>
-                <a className="hover:underline" href="#sell">
-                  Sell
+                <a className="hover:underline" href="#value">
+                  What to expect
                 </a>
               </li>
               <li>
