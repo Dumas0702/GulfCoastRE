@@ -18,36 +18,42 @@ const serviceAreas = [
     blurb: "Great Schools • Walkable downtown • Arts & dining.",
     img: "https://images.unsplash.com/photo-1610562409635-6242c9854e0d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Sailboats on the bay",
+    href: "https://www.homes.com/local-guide/fairhope-al/",
   },
   {
     name: "Daphne",
     blurb: "Mobile Bay • Old Town Daphne • Family-friendly neighborhoods.",
     img: "https://images.unsplash.com/photo-1703639854187-9c2853b2a600?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Sunset over Mobile Bay",
+    href: "https://www.homes.com/local-guide/daphne-al/",
   },
   {
     name: "Spanish Fort",
     blurb: "Historic Blakeley State Park • Quick I-10 commute.",
     img: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1600&auto=format&fit=crop",
     alt: "Trail through historic battlefield woods",
+    href: "https://www.homes.com/local-guide/spanish-fort-al/",
   },
   {
     name: "Foley",
     blurb: "Shopping • Value and growth.",
     img: "https://images.unsplash.com/photo-1728923026449-910ee589995d?q=80&w=2352&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Vintage train and depot museum",
+    href: "https://www.homes.com/local-guide/foley-al/",
   },
   {
     name: "Gulf Shores",
     blurb: "Sugar-sand beaches • Short-term rentals.",
     img: "https://images.unsplash.com/photo-1704291684136-7e902416cfb2?q=80&w=2350&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Gulf Shores beach shoreline",
+    href: "https://www.homes.com/local-guide/gulf-shores-al/",
   },
   {
     name: "Orange Beach",
     blurb: "Perdido Pass • Fishing & boating • Resort amenities.",
     img: "https://images.unsplash.com/photo-1706293042316-e84ffdf1f55d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Fishing boats",
+    href: "https://www.homes.com/local-guide/orange-beach-al/",
   },
 ];
 
@@ -641,21 +647,27 @@ export default function App() {
       >
         <div className="grid md:grid-cols-3 gap-6">
           {serviceAreas.map((a) => (
-            <div
+            <a
               key={a.name}
-              className="group relative overflow-hidden rounded-2xl border border-slate-200 shadow-sm"
+              href={a.href}
+              target="_blank"
+              rel="noreferrer"
+              className="group relative overflow-hidden rounded-2xl border border-slate-200 shadow-sm block"
             >
               <img
                 src={a.img}
-                alt={a.name}
+                alt={a.alt}
                 className="aspect-[4/3] w-full object-cover object-center transition group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-0 p-5 text-white">
                 <div className="text-lg font-semibold">{a.name}</div>
                 <div className="text-white/90 text-sm">{a.blurb}</div>
+                <div className="mt-2 text-xs text-white/80 underline">
+                  View city guide on Homes.com →
+                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </Section>
