@@ -76,6 +76,28 @@ const searchLinks = [
   },
 ];
 
+// Simple mortgage rate snapshot (edit these as the market moves)
+const mortgageRates = [
+  {
+    id: "MR-1",
+    label: "30-year fixed",
+    rate: "6.5%",
+    note: "Most popular for long-term buyers. Actual rate depends on credit, down payment, and lender.",
+  },
+  {
+    id: "MR-2",
+    label: "15-year fixed",
+    rate: "5.9%",
+    note: "Higher monthly payment but builds equity faster and cuts total interest paid.",
+  },
+  {
+    id: "MR-3",
+    label: "FHA / VA & other programs",
+    rate: "Varies",
+    note: "Special programs may offer lower rates or flexible terms for qualified buyers.",
+  },
+];
+
 // Homes.com articles — curated resources
 const resources = [
   {
@@ -243,6 +265,34 @@ function Testimonial({ quote, name, sub }: { quote: string; name: string; sub: s
       <p className="text-slate-800 italic">“{quote}”</p>
       <div className="mt-4 font-semibold">{name}</div>
       <div className="text-slate-600 text-sm">{sub}</div>
+    </div>
+  );
+}
+
+function MortgageRateCard({ item }) {
+  return (
+    <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+      <div>
+        <div className="text-sm uppercase text-slate-500 tracking-wide mb-1">
+          {item.label}
+        </div>
+        <div className="text-3xl font-bold text-teal-700 mb-2">
+          {item.rate}
+        </div>
+        <p className="text-slate-600 text-sm leading-relaxed">
+          {item.note}
+        </p>
+      </div>
+      <div className="mt-4">
+        <a
+          href="https://www.homes.com/news/category/mortgage-rates/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-teal-700 text-sm font-semibold inline-flex items-center gap-1 hover:underline"
+        >
+          See today’s live rates →
+        </a>
+      </div>
     </div>
   );
 }
@@ -474,18 +524,19 @@ export default function App() {
               </div>
             </a>
             <nav className="hidden md:flex items-center gap-6 text-sm">
-  <a href="#value" className="hover:text-teal-700">What to expect</a>
-  <a href="#areas" className="hover:text-teal-700">Areas</a>
-  <a href="#listings" className="hover:text-teal-700">Listings</a>
-  <a href="#testimonials" className="hover:text-teal-700">Reviews</a>
-  <a href="#contact" className="hover:text-teal-700">Contact</a>
-  <a
-    href={`tel:${PHONE.replace(/[^\d]/g, "")}`}
-    className="ml-2 inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-200 hover:bg-slate-100"
-  >
-    📞 {PHONE}
-  </a>
-</nav>
+            <a href="#value" className="hover:text-teal-700">What to expect</a>
+            <a href="#areas" className="hover:text-teal-700">Areas</a>
+            <a href="#listings" className="hover:text-teal-700">Listings</a>
+            <a href="#rates" className="hover:text-teal-700">Rates</a>
+            <a href="#testimonials" className="hover:text-teal-700">Reviews</a>
+            <a href="#contact" className="hover:text-teal-700">Contact</a>
+            <a
+              href={`tel:${PHONE.replace(/[^\d]/g, "")}`}
+              className="ml-2 inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-200 hover:bg-slate-100"
+            >
+              📞 {PHONE}
+            </a>
+            </nav>
 
             <button
               className="md:hidden text-2xl"
@@ -496,7 +547,7 @@ export default function App() {
           </div>
           {mobileOpen && (
             <div className="md:hidden pb-4 grid gap-2 text-sm">
-              {["#value", "#areas", "#listings", "#testimonials", "#contact"].map(
+              {["#value", "#areas", "#listings", "#rates", "#testimonials", "#contact"].map(
                 (href) => (
                   <a
                     key={href}
@@ -639,6 +690,22 @@ export default function App() {
         </div>
       </Section>
 
+      {/* Mortgage Rates */}
+      <Section
+        id="rates"
+        title="Mortgage rate snapshot"
+        subtitle="Rates change daily. Here’s a quick snapshot and a link to see today’s live numbers. I’m happy to connect you with trusted local lenders."
+      >
+        <div className="grid md:grid-cols-3 gap-6">
+          {mortgageRates.map((mr) => (
+            <MortgageRateCard key={mr.id} item={mr} />
+          ))}
+        </div>
+        <p className="mt-4 text-xs text-slate-500">
+          Rates shown are illustrative only and not a commitment to lend. Always consult a licensed lender for personalized quotes and current programs.
+        </p>
+      </Section>
+
       {/* Testimonials */}
       <Section
         id="testimonials"
@@ -776,6 +843,11 @@ export default function App() {
               <li>
                 <a className="hover:underline" href="#listings">
                   Listings
+                </a>
+              </li>
+               <li>
+                <a className="hover:underline" href="#rates">
+                  Rates
                 </a>
               </li>
               <li>
