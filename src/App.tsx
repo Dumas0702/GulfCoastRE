@@ -76,6 +76,34 @@ const searchLinks = [
   },
 ];
 
+// Homes.com articles — curated resources
+const resources = [
+  {
+    id: "HS-1",
+    title: "Homebuyer Guide",
+    type: "Article",
+    href: "https://www.homes.com/learn/buyer-guide/",
+    summary:
+      "A helpful walkthrough of the buying journey — from budgeting and pre-approval to touring homes and understanding closing costs. A great primer if you're considering a move in Baldwin County.",
+  },
+  {
+    id: "HS-2",
+    title: "Homeseller Guide",
+    type: "Article",
+    href: "https://www.homes.com/learn/seller-guide/",
+    summary:
+      "An overview of what today’s sellers should expect: pricing strategies, prep tips, timelines, and how to navigate offers with confidence. A solid foundation before listing a home along the Gulf Coast.",
+  },
+  {
+    id: "HS-3",
+    title: "How to Handle Holiday Decorations When Selling",
+    type: "Article",
+    href: "https://www.homes.com/learn/how-to-handle-holiday-decorations-when-selling-your-home/",
+    summary:
+      "Practical, tasteful tips for making your home warm and inviting during the holidays—without distracting buyers. Helpful guidance for seasonal sellers in our Baldwin County market.",
+  },
+];
+
 // ===== UI Helpers =====
 function Section({
   id,
@@ -180,6 +208,31 @@ function SearchCard({ item }: { item: any }) {
           </button>
         </div>
       </div>
+    </div>
+  );
+}
+
+function ResourceCard({ item }) {
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition">
+      <div className="text-xs uppercase text-slate-500 mb-2 tracking-wide">
+        {item.type}
+      </div>
+      <h3 className="text-lg font-semibold leading-tight mb-2">
+        {item.title}
+      </h3>
+      <p className="text-slate-600 text-sm mb-4">
+        {item.summary}
+      </p>
+
+      <a
+        href={item.href}
+        target="_blank"
+        rel="noreferrer"
+        className="text-teal-700 font-semibold inline-flex items-center gap-2 hover:underline"
+      >
+        Read on Homes.com →
+      </a>
     </div>
   );
 }
@@ -570,6 +623,19 @@ export default function App() {
         <div className="mt-4 text-xs text-slate-500">
           Links open third-party sites. Data believed accurate but not
           guaranteed. For the most current information, request a custom search.
+        </div>
+      </Section>
+      
+      {/* Articles */}
+      <Section
+        id="resources"
+        title="Guides & Insights"
+        subtitle="Curated articles from trusted sources to help you buy or sell with confidence."
+      >
+        <div className="grid md:grid-cols-3 gap-6">
+          {resources.map((r) => (
+            <ResourceCard key={r.id} item={r} />
+          ))}
         </div>
       </Section>
 
