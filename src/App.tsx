@@ -58,21 +58,21 @@ const searchLinks = [
     title: "Mobile Bay Waterfront",
     desc: "Waterfront homes in Fairhope and Daphne along beautiful Mobile Bay.",
     href: "https://www.homes.com/fairhope-al/waterfront/",
-    img: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1732629394235-ec858354afbc?q=80&w=1477&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "SRCH-2",
     title: "Gulf Coast Waterfront",
     desc: "Explore waterfront homes in Gulf Shores, Fort Morgan, and Orange Beach.",
     href: "https://www.homes.com/gulf-shores-al/waterfront/",
-    img: "https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1644578843995-b2cc1acbdf33?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "SRCH-3",
     title: "Baldwin County — Newest Listings",
     desc: "See homes added in the last 7 days across Baldwin County.",
     href: "https://www.homes.com/baldwin-county-al/new-listings/",
-    img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
