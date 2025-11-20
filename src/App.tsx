@@ -625,7 +625,7 @@ export default function App() {
           guaranteed. For the most current information, request a custom search.
         </div>
       </Section>
-      
+
       {/* Articles */}
       <Section
         id="resources"
