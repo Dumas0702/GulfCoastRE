@@ -3,7 +3,7 @@ import React, { useMemo, useState } from "react";
 
 // ===== Quick Settings (edit these) =====
 const AGENT_NAME = "Greg Dumas";
-const TAGLINE = "Helpful, and professional real estate guidance for Baldwin County";
+const TAGLINE = "Helpful and professional real estate guidance for Baldwin County";
 const PHONE = "(251) 752-2814";
 const EMAIL = "gregorymdumas@gmail.com";
 const BROKERAGE = "Key Performance Team — Keller Williams (Daphne Office)";
@@ -55,24 +55,24 @@ const serviceAreas = [
 const searchLinks = [
   {
     id: "SRCH-1",
-    title: "Baldwin County — All Homes",
-    desc: "Browse the full market across price points and cities.",
-    href: "https://www.homes.com/baldwin-county-al/",
-    img: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Mobile Bay Waterfront",
+    desc: "Waterfront homes in Fairhope and Daphne along beautiful Mobile Bay.",
+    href: "https://www.homes.com/fairhope-al/waterfront/",
+    img: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1600&auto=format&fit=crop",
   },
   {
     id: "SRCH-2",
-    title: "Daphne — New This Week",
-    desc: "See the freshest listings added in the last 7 days.",
-    href: "https://www.homes.com/daphne-al/",
-    img: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Gulf Coast Waterfront",
+    desc: "Explore waterfront homes in Gulf Shores, Fort Morgan, and Orange Beach.",
+    href: "https://www.homes.com/gulf-shores-al/waterfront/",
+    img: "https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1600&auto=format&fit=crop",
   },
   {
     id: "SRCH-3",
-    title: "Gulf Shores — Condos",
-    desc: "Beach and lagoon-side condos at a range of budgets.",
-    href: "https://www.homes.com/gulf-shores-al/condos/",
-    img: "https://images.unsplash.com/photo-1656261443293-02c750b32bb5?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Baldwin County — Newest Listings",
+    desc: "See homes added in the last 7 days across Baldwin County.",
+    href: "https://www.homes.com/baldwin-county-al/new-listings/",
+    img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1600&auto=format&fit=crop",
   },
 ];
 
